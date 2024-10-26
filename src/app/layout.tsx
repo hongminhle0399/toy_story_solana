@@ -2,15 +2,34 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const poppinRegular = localFont({
+  src: "./fonts/Poppins-Regular.ttf",
+  variable: "--font-poppins-regular",
+  weight: "400",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const poppinLight = localFont({
+  src: "./fonts/Poppins-Light.ttf",
+  variable: "--font-poppins-light",
+  weight: "300",
+});
+
+const poppinMedium = localFont({
+  src: "./fonts/Poppins-Medium.ttf",
+  variable: "--font-poppins-medium",
+  weight: "500",
+});
+
+const poppinSemibold = localFont({
+  src: "./fonts/Poppins-Semibold.ttf",
+  variable: "--font-poppins-semibold",
+  weight: "600",
+});
+
+const poppinBold = localFont({
+  src: "./fonts/Poppins-Bold.ttf",
+  variable: "--font-poppins-bold",
+  weight: "700",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +45,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${poppinRegular.variable} 
+          ${poppinLight.variable} 
+          ${poppinMedium.variable} 
+          ${poppinSemibold.variable} 
+          ${poppinBold.variable} 
+          antialiased`}
       >
         {children}
       </body>
